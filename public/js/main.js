@@ -19,10 +19,18 @@
 		// baseUrl: "",
 		paths: {
 			// Core libraries
-			'jquery': 'lib/jquery-2.0.3.min'
+			'jquery': 'lib/jquery-2.0.3.min',
+			'underscore' : 'lib/underscore-1.5.2',
+			'backbone': 'lib/backbone-1.1.0'
 		},
 		shim: {
-			
+			'underscore': {
+				exports: 'underscore'
+			},
+			'backbone': {
+				deps: ['underscore','jquery'],
+				exports: 'Backbone'
+			}
 		}
 	};
 
